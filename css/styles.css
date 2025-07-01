@@ -1,0 +1,125 @@
+.background {
+    height: 100vh;
+    background-color: #90c6eb;
+}
+
+html[data-bs-theme="dark"] .background {
+    background-color: #022c48;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.moon-appear {
+  align-self: flex-start;
+  opacity: 0.3;
+  height: 150px;
+  margin-top: 10px;
+  margin-left: 20px;
+  clip-path: circle(40% at center);
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 8s infinite ease-in-out;
+  }
+
+  .blue {
+    background-color: lightblue;
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.2; }
+  }
+
+  .star1 { top: 10%; left: 50%; }
+  .star2 { top: 15%; left: 85%; }
+  .star3 { top: 25%; left: 60%; }
+  .star4 { top: 30%; left: 35%; }
+  .star5 { top: 40%; left: 15%; }
+  .star6 { top: 50%; left: 50%; }
+  .star7 { top: 55%; left: 70%; }
+  .star8 { top: 65%; left: 90%; }
+  .star9 { top: 75%; left: 10%; }
+  .star10 { top: 80%; left: 40%; }
+
+.standard-delay {
+    animation-name: delay;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards
+}
+
+@keyframes delay {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.three-second-delay {
+    animation-delay: 3s;
+}
+
+
+/* Fonts */
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+/* Breakpoint */
+
+@media (max-width: 576px) {
+   .btn {
+    font-size: 0.7rem;
+    padding-left: 7px;
+   }
+
+  .moon-appear {
+    height: 80px;
+    margin-top: 5px;
+    margin-left: 10px;
+   }
+   
+   .roboto-font {
+    font-size: 1rem;
+   }
+
+   .bebas-neue-regular {
+    font-size: 3rem;
+   }
+}
