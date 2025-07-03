@@ -1,3 +1,8 @@
+
+const wrapper = document.getElementById('stars-wrapper');
+wrapper.style.height = document.documentElement.scrollHeight + 'px';
+
+
 $(".theme-button").click(function() 
 {
     var htmlElem = $("html");
@@ -13,8 +18,8 @@ $(".theme-button").click(function()
         })
 
         $(".theme-button").text("Light mode");
-        $(".theme-button").removeClass("btn-dark");
-        $(".theme-button").addClass("btn-light");
+        $(".theme-button").removeClass("btn-dark").addClass("btn-light");
+        
         $("#moon").removeClass("hidden");
     }
     else
@@ -28,8 +33,8 @@ $(".theme-button").click(function()
         })
 
         $(".theme-button").text("Night mode");
-        $(".theme-button").removeClass("btn-light");
-        $(".theme-button").addClass("btn-dark");
+        $(".theme-button").removeClass("btn-light").addClass("btn-dark");
+
         $("#moon").addClass("hidden");
    }
 })
