@@ -21,6 +21,9 @@ $(".theme-button").click(function()
         $(".theme-button").removeClass("btn-dark").addClass("btn-light");
         
         $("#moon").removeClass("hidden");
+
+        $(".link-icon").attr("fill", "white");
+        $(".bi-check-lg").attr("fill", "#ffbfc0");
     }
     else
     {
@@ -36,5 +39,23 @@ $(".theme-button").click(function()
         $(".theme-button").removeClass("btn-light").addClass("btn-dark");
 
         $("#moon").addClass("hidden");
+
+        $(".link-icon").attr("fill", "black");
+        $(".bi-check-lg").attr("fill", "#007A4D");
    }
+})
+
+
+$('.bi-envelope').on('click', function ()
+{
+    const email = 'dr_matevosyan@yahoo.com';
+
+    navigator.clipboard.writeText(email).then(function ()
+    {
+        $('#email-copy-pop').removeClass('hidden');
+
+        setTimeout(function () {
+            $('#email-copy-pop').addClass('hidden');
+        }, 1500);
+    })
 })
