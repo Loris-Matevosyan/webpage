@@ -1,4 +1,3 @@
-
 const wrapper = document.getElementById('stars-wrapper');
 wrapper.style.height = document.documentElement.scrollHeight + 'px';
 
@@ -59,3 +58,25 @@ $('.bi-envelope').on('click', function ()
         }, 1500);
     })
 })
+
+const boxes = document.querySelectorAll(".text-animate, .icon-animate");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+        entry.target.classList.remove("visible");
+        return;
+    }
+
+    if (entry.target.classList.contains("text-animate")) {
+            entry.target.classList.add("visible");
+    }
+    if (entry.target.classList.contains("icon-animate")) {
+            entry.target.classList.add("visible");
+    }
+  });
+});
+
+boxes.forEach(box => {
+  observer.observe(box);
+});
