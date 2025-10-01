@@ -62,17 +62,12 @@ $('.bi-envelope').on('click', function ()
 const boxes = document.querySelectorAll(".text-animate, .icon-animate");
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-        entry.target.classList.remove("visible");
-        return;
-    }
 
-    if (entry.target.classList.contains("text-animate")) {
-            entry.target.classList.add("visible");
-    }
-    if (entry.target.classList.contains("icon-animate")) {
-            entry.target.classList.add("visible");
+    entries.forEach( entry => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+    } else {   
+        entry.target.classList.remove("visible");
     }
   });
 });
