@@ -75,3 +75,16 @@ const observer = new IntersectionObserver((entries) => {
 boxes.forEach(box => {
   observer.observe(box);
 });
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+
+$('#rememberapp-about-button').click( function() {
+    const tooltip = bootstrap.Tooltip.getInstance(this);
+    if (tooltip) {
+        tooltip.hide();
+    }
+    this.blur();
+
+    window.open('https://github.com/Loris-Matevosyan/RememberApp', '_blank');
+})

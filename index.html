@@ -98,18 +98,18 @@
 
     <section class = "container">
         <div class = "four-icon-grid col-md-4 col-sm-6 mt-5">
+            <img src="images/javascript.png" id = "js-icon" class ="icon icon-animate">
             <img src="images/html.png" id = "html-icon" class ="icon icon-animate">
             <img src="images/css.png" id = "css-icon" class ="icon mt-1 icon-animate">
             <img src="images/node_js.png" id = "node-icon" class ="icon mt-2 icon-animate">
             <img src="images/react.png" id = "react-icon" class ="icon icon-animate">
-            <p id = "web-text" class = "roboto-font description-size ms-3 web-skills-text four-icon-text text-animate">
-                Create responsive websites using HTML, CSS,
-                and Bootstrap, with interactive behavior
-                powered by jQuery. Focus on clean design,
-                usability, and mobile-friendly layouts,
-                while leveraging Node.js for backend
-                development and React.js for modern,
-                dynamic front-ends
+            <p class = "roboto-font description-size ms-3 web-skills-text four-icon-text text-animate">
+                Build responsive websites using HTML, CSS,
+                JavaScript, and Bootstrap, incorporating interactive
+                features with JavaScript and jQuery. Focus on
+                clean, user-friendly design, and mobile-friendly
+                layouts, while leveraging Node.js for backend
+                development and React.js for modern, dynamic front-ends
             </p>
         </div>
     </section>
@@ -149,7 +149,23 @@
         </div>
     </section>
 
-    <section class="flex-center">
+    <section id="projects-section" class="container">
+        <div class="offset-md-9 col-sm-4">
+            <h2 id="projects-title" class="bebas-neue-regular skills-size mt-5"> Portfolio </h2>
+        </div>
+        <div id="projects-container">
+            <div id="rememberapp-container">
+                <a href="https://mythwebapp.online" class="icon-animate">
+                    <img id="rememberapp-img" src="images/RememberApp.png" alt="Portfolio Image">
+                </a>
+                <button id="rememberapp-about-button" type="button" class="btn btn-secondary icon-animate" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="Will redirect to Github">
+                    <i>About RememberApp</i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="continue-update-section" class="flex-center">
         <p id = "continue-update" class="roboto-font standard-delay" >
             This webpage is continually being updated.
             Check back soon for additional projects and
@@ -158,7 +174,7 @@
     </section>
 
     <section class="flex">
-       <div style="height: 50px">
+       <div style="height: 5rem">
        </div>
     </section>
 
